@@ -5,11 +5,15 @@ using Microsoft.EntityFrameworkCore;
 using AnimalShelter.Models;
 using System;
 using System.Linq;
+using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Identity;
 
 namespace AnimalShelter.Controllers
 {
+
   [Route("api/[controller]")]
   [ApiController]
+  
   public class AnimalsController : ControllerBase
   {
     private readonly AnimalShelterContext _db;
